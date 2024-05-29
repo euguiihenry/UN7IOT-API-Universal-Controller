@@ -1,0 +1,27 @@
+{
+  "name": "universal_controller_app_api",
+  "version": "1.0.0",
+  "description": "This is a node api to send and receive data into the blynk cloud to control a esp32 board used like a universal controller",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.20.3"
+  },
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsup src",
+    "start": "node dist/server.js"
+  },
+  "author": "Henry",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "dotenv": "^16.4.5",
+    "tsup": "^8.0.2",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "fastify": "^4.27.0",
+    "node-fetch": "^3.3.2"
+  }
+}

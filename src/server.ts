@@ -1,6 +1,6 @@
 import fastify from "fastify";
 import * as dotenv from 'dotenv';
-import fetch from "node-fetch";
+const fetch = require('node-fetch');
 
 dotenv.config();
 const app = fastify();

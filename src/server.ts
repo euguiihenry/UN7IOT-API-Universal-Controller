@@ -7,7 +7,7 @@ dotenv.config();
 const app = fastify();
 
 app.register(cors, { 
-    origin: ['http://localhost:4200', 'universalcontroller.vercel.app' ],
+    origin: ['http://localhost:4200', 'https://universalcontroller.vercel.app' ],
     methods: ['POST'],
     allowedHeaders: ['Content-Type', 'Access-Control-Allow-Origin'], 
 });

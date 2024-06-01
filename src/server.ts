@@ -1,9 +1,16 @@
 import fastify from "fastify";
 import * as dotenv from 'dotenv';
 import axios from 'axios';
+import cors from '@fastify/cors';
 
 dotenv.config();
 const app = fastify();
+
+app.register(cors, { 
+    origin: ['http://localhost:4200', 'universalcontroller.vercel.app' ],
+    methods: ['POST'],
+    allowedHeaders: ['Content-Type', 'Access-Control-Allow-Origin'], 
+});
 
 app.post("/get-info", async (request, reply) => {
     const body: getBody = request.body as getBody;
